@@ -13,15 +13,6 @@ def print_table(table, title_list):
     print(table.table)
 
 
-# This function needs to print result of the special functions
-# @result: string or list or dictionary - result of the special function
-# @label: string - label of the result
-def print_result(result, label):
-    for row in range(len(result)):
-        for column in range(len(result[0])):
-            print(str(label[column]) + ": " + str(result[row][column]))
-
-
 # @title: string - title of the menu
 # @list_options: list of strings - the options in the menu
 # @exit_message: string - the last option with (0) (example: "Back to main menu")

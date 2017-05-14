@@ -39,8 +39,8 @@ def aduni_students_data():
 
 
 def new_applicant():
-    handle_db_queries("""INSERT INTO applicants VALUES (11, 'Markus', 'Schaffarzyk',
-                      '003620/725-2666', 'djnovus@groovecoverage.com', 54823);""")
+    handle_db_queries("""INSERT INTO applicants (first_name, last_name, phone_number, email, application_code)
+                      VALUES ('Markus', 'Schaffarzyk','003620/725-2666', 'djnovus@groovecoverage.com', 54823);""")
     result = handle_db_queries("""SELECT * FROM applicants 
                                WHERE application_code=54823; """)
     ui.print_table(result, ["ID", "First name", "Last name", "Phone number", "Email",
