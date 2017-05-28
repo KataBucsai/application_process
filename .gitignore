@@ -1,3 +1,6 @@
+# Private config is not uploaded. Create your own from private_config_template.py
+private_connection.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -5,6 +8,9 @@ __pycache__/
 
 # C extensions
 *.so
+
+# Database
+*.sql
 
 # Distribution / packaging
 .Python
