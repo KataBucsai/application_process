@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Application process menu</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body>
+    <h1>Application process menu</h1>
+        {% set count = [0] %}
+        {% for menu in menu_list %}
+            {%if count.append(count.pop() + 1) %}{% endif %}
+            <h3><a href='/{{ menu[0] }}'>{{ count[0] }}. {{ menu[1] }}</a></h3>
+        {% endfor %}
+</body>
+
+</html>

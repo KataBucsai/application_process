@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body>
+    <h1>{{ title }}</h1>
+    <br>
+    <form action="/">
+        <input type="submit" value="Back to menu" id="menu" name="back to menu">
+    </form>
+    <br>
+    {% set count = [0] %}
+    <table>
+        {% if result %}
+            <tr>
+                <td></td>
+            {% for column in columns %}           
+                <td>{{ column }}</td>               
+            {% endfor %}
+            </tr>          
+            {% for row in result %}
+                <tr>
+                {%if count.append(count.pop() + 1) %}{% endif %}   
+                    <td>{{ count[0] }}</td>
+                {% for data in row %}            
+                    <td>{{ data }}</td>      
+                {% endfor %}
+                </tr>
+            {% endfor %}
+        {% else %}
+            <h3>There is no requested result</h3>
+        {% endif %}
+    </table>
+        
+</body>
+
+</html>
